@@ -1,0 +1,87 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+	<head>
+		<title>
+			sign_up
+		</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous">
+	</head>
+	<body class="no-padding reader-black-font">
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous">
+		</script>
+    
+		<table class="table">
+			<div class="sign">
+				<tr>
+					<td>
+						<div class="logo">
+							<a href="/">
+								<img src="{% static 'image/LOGO.png' %}" alt="Logo">
+							</a>
+						</div>
+					</td>
+
+					<div class="main">
+						<td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>
+							<h4 class="title">
+								<div class="normal-title">
+									<a class="" href="/sign_in">
+										登录
+									</a>
+									<b>
+										·
+									</b>
+									<a id="js-sign-up-btn" class="active" href="/sign_up">
+										注册
+									</a>
+								</div>
+							</h4>
+
+							<div class="js-sign-up-container">
+								<form class="new_user" id="new_user" action="/users/register" accept-charset="UTF-8"
+								method="post">
+									<input name="utf8" type="hidden" value="✓">
+									<input type="hidden" name="authenticity_token" value="gBnPrrK4J9E5b0wR4ItAjZ584AFfqyUKCyE5lyCsaU/HrSDbK4RcJ6bwd3LLhIOM1LSU+qNIgm45RutreiOsww==">
+									
+                  <div class="input-prepend restyle">
+										<input placeholder="你的昵称" type="text" value="" name="user[nickname]" id="user_nickname">
+										<i class="iconfont ic-user">
+										</i>
+									</div>
+
+									<div class="input-prepend">
+										<input placeholder="设置密码" type="password" name="user[password]" id="user_password">
+										<i class="iconfont ic-password">
+										</i>
+									</div>
+
+									<input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn"
+									data-disable-with="注册">
+								</form>
+
+							</div>
+					</div>
+					</td>
+				</tr>
+			</div>
+	</body>
+
+</html>
